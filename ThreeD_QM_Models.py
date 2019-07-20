@@ -54,7 +54,7 @@ class PhasorModel:
                 phase1 = arctan2(psi.imag, psi.real)
                 if phase1 < 0.0:
                     phase1 += 2*pi
-                s1.color = color.hsv_to_rgb((1.0 - phase1/(2*pi),1.0,1.0))
+                s1.color = color.hsv_to_rgb(vec(1.0 - phase1/(2*pi),1.0,1.0))
             
     def toggleVisible(self, index):
         for s in self.slist:
